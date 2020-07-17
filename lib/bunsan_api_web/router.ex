@@ -7,6 +7,7 @@ defmodule BunsanApiWeb.Router do
 
   scope "/api", BunsanApiWeb do
     pipe_through :api
+    resources "/v1/users", UserController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
